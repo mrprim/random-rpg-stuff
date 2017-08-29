@@ -4,7 +4,9 @@
   "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node index.js",
+    "test": "mocha --recursive \"./**/*.test.js\"",
+    "publish": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/mrprim/random-generators/issues"
   },
-  "homepage": "https://github.com/mrprim/random-generators#readme"
+  "homepage": "https://github.com/mrprim/random-generators#readme",
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.5.0"
+  }
 }

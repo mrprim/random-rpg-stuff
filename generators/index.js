@@ -1,5 +1,7 @@
 const characters = require('./characters')
+const names = require('./names')
 
 module.exports = {
-  characters: characters
+  characters: characters,
+  names: names
 }
