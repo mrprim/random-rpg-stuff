@@ -1,6 +1,6 @@
 {
   "name": "random-rpg-stuff",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
   "main": "index.js",
   "scripts": {

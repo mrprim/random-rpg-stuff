@@ -1,5 +1,3 @@
-function x () {
-  console.log('test')
-}
+const generators = require('./generators')
 
-module.exports = x
+module.exports = generators
