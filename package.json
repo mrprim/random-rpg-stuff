@@ -1,0 +1,25 @@
+{
+  "name": "random-rpg-stuff",
+  "version": "0.0.0",
+  "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrprim/random-generators.git"
+  },
+  "keywords": [
+    "rpg",
+    "random",
+    "characters",
+    "names"
+  ],
+  "author": "Sergio Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrprim/random-generators/issues"
+  },
+  "homepage": "https://github.com/mrprim/random-generators#readme"
+}
