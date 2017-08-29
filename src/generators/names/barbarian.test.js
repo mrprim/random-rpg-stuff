@@ -13,10 +13,11 @@ describe('generators.names.barbarian', () => {
     expect(typeof result).toEqual('string')
   })
 
-  it('no part should be undefined', function () {
+  it('no part should be undefined/NaN', function () {
     for (let i = 0; i < 500; i++) {
       const result = barbarian()
       expect(result.indexOf('undefined')).toEqual(-1)
+      expect(result.indexOf('NaN')).toEqual(-1)
     }
   })
 })
