@@ -1,3 +1,3 @@
-const generators = require('./generators')
+const generators = require('./src/generators')
 
 module.exports = generators
