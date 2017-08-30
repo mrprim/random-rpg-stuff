@@ -10,5 +10,6 @@ describe('generators.characters.umdaar', () => {
   it('should return an object', function () {
     const result = umdaar()
     expect(result).toBeTruthy()
+    console.log(result.toString())
   })
 })
