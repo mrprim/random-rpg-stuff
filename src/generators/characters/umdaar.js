@@ -158,7 +158,7 @@ function characterGenerator () {
   character.descriptor = getDescriptorFromApproaches(approaches)
   character.characterClass = getClassFromApproaches(approaches)
   character.aspects = getAspects(character)
-
+  character.toString = () => this.name + 'the' + this.approaches.bioform
   return character
 }
 
