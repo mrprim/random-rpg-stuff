@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha --recursive \"./**/*.test.js\"",
-    "publish": "npm version patch && npm publish"
+    "test": "mocha --recursive \"./**/*.test.js\""
   },
   "repository": {
     "type": "git",
