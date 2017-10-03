@@ -18,7 +18,6 @@ describe('generators.misc.oath', () => {
       const result = oath()
       expect(result.indexOf('undefined')).toEqual(-1, 'is undefined')
       expect(result.indexOf('NaN')).toEqual(-1, 'is NaN')
-      console.log(result)
     }
   })
 })

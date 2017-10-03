@@ -16,6 +16,8 @@ const adaptations = require('../../data/adaptations.fate')
 const animalCharts = [bugsAndFish, herpsAndDinos, birdsAndMammals]
 const stuntCharts = [powers, weapons, adaptations]
 
+const formatters = require('../../formatters')
+
 function getName () {
   const name = nameGenerator()
   return name.charAt(0).toUpperCase() + name.slice(1)
@@ -158,8 +160,14 @@ function characterGenerator () {
   character.descriptor = getDescriptorFromApproaches(approaches)
   character.characterClass = getClassFromApproaches(approaches)
   character.aspects = getAspects(character)
-  character.toString = function () {
-    return this.name + ' the ' + this.aspects.bioform
+  character.toString = function (format) {
+    const { type, animals, descriptor, characterClass } = character
+    const animalString = animals.length ? animals.join('/').trim() + '-' : ''
+    const f = formatters(format)
+
+    const bioform = (descriptor + ' ' + f.strong(f.t(animalString, animalString.replace('/', '-')) + type + ' ' + characterClass)).toLowerCase()
+
+    return f.strong(this.name) + ' the ' + bioform
   }
   return character
 }

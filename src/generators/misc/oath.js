@@ -1,11 +1,11 @@
 const sample = require('../../utils/sample')
 const barbarian = require('../names/barbarian')
-const bodyPart = require('../things/bodyPart')
+const bodypart = require('../things/bodypart')
 const weapon = require('../things/weapon')
 const toTitleCase = require('../../utils/toTitleCase')
 
 const thing = function thing () {
-  return sample([bodyPart, weapon])()
+  return sample([bodypart, weapon])()
 }
 
 module.exports = function oath () {
