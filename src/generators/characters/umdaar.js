@@ -18,18 +18,18 @@ const stuntCharts = [powers, weapons, adaptations]
 
 const formatters = require('../../formatters')
 
-function getName () {
+function getName() {
   const name = nameGenerator()
   return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
-function formatAnimalString (animal) {
+function formatAnimalString(animal) {
   let animalOptions = animal.subvalue ? animal.subvalue.split(',') : animal.value.split(',')
 
   return sample(animalOptions).trim()
 }
 
-function getApproaches (setupApproaches) {
+function getApproaches(setupApproaches) {
   const rslt = []
   let values = [3, 2, 2, 1, 1, 0]
   let approaches = ['Careful', 'Clever', 'Flashy', 'Forceful', 'Quick', 'Sneaky']
@@ -69,15 +69,15 @@ function getApproaches (setupApproaches) {
   return rslt
 }
 
-function getDescriptorFromApproaches (approaches) {
+function getDescriptorFromApproaches(approaches) {
   return getSynonym(approaches[0].approach)
 }
 
-function getClassFromApproaches (approaches) {
+function getClassFromApproaches(approaches) {
   return getClass(approaches[0].approach)
 }
 
-function getStunt (previousStunt) {
+function getStunt(previousStunt) {
   const stuntChart = sample(stuntCharts)
   let stunt = getFateChartValue(stuntChart, roll4dF())
 
@@ -95,20 +95,20 @@ function getStunt (previousStunt) {
   return stunt
 }
 
-function getAspects (character = {}) {
+function getAspects(character = {}) {
   return {
     bioform: getMainConcept(character)
   }
 }
 
-function getMainConcept (character) {
+function getMainConcept(character) {
   const { type, animals, descriptor, characterClass } = character
   const animalString = animals.length ? animals.join('/').trim() + '-' : ''
 
   return (descriptor + ' ' + animalString + type + ' ' + characterClass).toLowerCase()
 }
 
-function characterGenerator () {
+function characterGenerator() {
   const character = {}
   const animals = []
   const stunts = []
@@ -165,7 +165,7 @@ function characterGenerator () {
     const animalString = animals.length ? animals.join('/').trim() + '-' : ''
     const f = formatters(format)
 
-    const bioform = (descriptor + ' ' + f.strong(f.t(animalString, animalString.replace('/', '-')) + type + ' ' + characterClass)).toLowerCase()
+    const bioform = (descriptor + ' ' + f.t(animalString, animalString.replace('/', '-')) + type + ' ' + characterClass).toLowerCase()
 
     return f.strong(this.name) + ' the ' + bioform
   }
