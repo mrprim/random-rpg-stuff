@@ -3,7 +3,8 @@ const classes = require('./classes')
 const sample = require('../../utils/sample')
 
 module.exports = {
-  umdaar: umdaar,
+  umdaar,
+  classes,
   random: () => sample([
     umdaar,
     classes
