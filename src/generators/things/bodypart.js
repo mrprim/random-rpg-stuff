@@ -1,6 +1,6 @@
 const sample = require('../../utils/sample')
 
-module.exports = function bodyParts() {
+module.exports = function bodyParts () {
   return sample([
     'head',
     'mane',
