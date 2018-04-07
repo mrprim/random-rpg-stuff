@@ -1,10 +1,3 @@
 const getRandom = require('./index')
 
-console.log(getRandom('noun'))
-console.log(getRandom('barbarianName'))
-console.log(getRandom('bodypart'))
-console.log(getRandom('class'))
-console.log(getRandom('descriptor'))
-console.log(getRandom('oath'))
-console.log(getRandom('umdaarCharacter'))
-console.log(getRandom('weapon'))
+console.log(getRandom('job'))

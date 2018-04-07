@@ -16,6 +16,7 @@ barbarianName - String
 bodypart - String
 class - String
 descriptor - String
+job - String
 noun - String
 oath - String
 umdaarCharacter - Object
