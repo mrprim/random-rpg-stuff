@@ -1,6 +1,6 @@
-const sample = require('../../utils/sample')
+const sample = require('../utils/sample')
 
-module.exports = function weapon () {
+module.exports = () => {
   return sample([
     'sword',
     'glaive',
@@ -13,6 +13,8 @@ module.exports = function weapon () {
     'rod',
     'orb',
     'axe',
-    'halberd'
+    'halberd',
+    'bow',
+    'crossbow'
   ])
 }

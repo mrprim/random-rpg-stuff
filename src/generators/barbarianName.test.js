@@ -4,7 +4,7 @@ const expect = require('expect')
 const describe = mocha.describe
 const it = mocha.it
 
-const barbarian = require('./barbarian')
+const barbarian = require('./barbarianName')
 
 describe('generators.names.barbarian', () => {
   it('should return a string', function () {

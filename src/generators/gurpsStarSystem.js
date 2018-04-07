@@ -1,4 +1,4 @@
-var roll = require('../../utils/dice').roll
+var roll = require('../utils/dice').roll
 
 var rollThree = () => roll(6) + roll(6) + roll(6)
 
@@ -6,7 +6,7 @@ var between = (val, min, max) => {
   return val >= min && val <= max
 }
 
-function getStarCount () {
+function getStarCount() {
   var val = rollThree()
 
   if (between(val, 3, 10)) {
@@ -18,7 +18,7 @@ function getStarCount () {
   }
 }
 
-function getSystemProperties () {
+function getSystemProperties() {
   const val1 = rollThree()
   const properties = {}
   let base, a, b
@@ -58,7 +58,7 @@ function getSystemProperties () {
   properties.age = (base) + (roll(6) - a - 1) + (roll(6) - b - 1)
   return properties
 }
-function getStarMass () {
+function getStarMass() {
   var val1 = rollThree()
   var val2 = rollThree()
 
@@ -150,7 +150,7 @@ function getStarMass () {
   }
 }
 
-function getStarProperties (star, age) {
+function getStarProperties(star, age) {
   const properties = {}
   let type, temp, lMin, lMax, mSpan, sSpan, gSpan
 
@@ -437,7 +437,7 @@ function getStarProperties (star, age) {
   return properties
 }
 
-function getClass (age, mSpan, sSpan, gSpan) {
+function getClass(age, mSpan, sSpan, gSpan) {
   if (age <= mSpan) {
     return 'main sequence'
   } else if (age <= (mSpan + sSpan)) {
@@ -449,25 +449,25 @@ function getClass (age, mSpan, sSpan, gSpan) {
   }
 }
 
-function getMainSequenceLuminosity (age, mSpan, lMin, lMax) {
+function getMainSequenceLuminosity(age, mSpan, lMin, lMax) {
   if (!lMax) {
     return varyByTenPercent(lMin)
   }
   return lMin + ((age / mSpan) * (lMax - lMin))
 }
 
-function varyByTenPercent (val) {
+function varyByTenPercent(val) {
   return val * (roll(20) + 90 * 0.01)
 }
-function getSubgiantTemperature (temp, age, sSpan) {
+function getSubgiantTemperature(temp, age, sSpan) {
   return temp - ((age / sSpan) * (temp - 4800))
 }
 
-function getGiantTemperature () {
+function getGiantTemperature() {
   return (roll(6) + roll(6) - 2) * 200 + 3000
 }
 
-function generateSystem () {
+function generateSystem() {
   const system = {}
   system.stars = getStarCount()
   var sysProps = getSystemProperties()
