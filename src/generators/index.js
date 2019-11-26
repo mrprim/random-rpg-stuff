@@ -9,5 +9,6 @@ module.exports = {
   noun: require('./noun'),
   oath: require('./oath'),
   umdaarCharacter: require('./umdaarCharacter'),
-  weapon: require('./weapon')
+  weapon: require('./weapon'),
+  fotfSpell: require('./fotfSpell')
 }
