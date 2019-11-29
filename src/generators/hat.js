@@ -1,4 +1,4 @@
-const sample = require('./utils/sample')
+const sample = require('../utils/sample')
 module.exports = () => {
   return sample([
     'abaya',
