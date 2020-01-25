@@ -172,4 +172,4 @@ function characterGenerator () {
   return character
 }
 
-module.exports = characterGenerator
+export default  characterGenerator

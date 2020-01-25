@@ -1,4 +1,4 @@
-const sample = require('../utils/sample')
+import sample from '../utils/sample'
 
 const careful = ['accurate', 'attentive', 'careful', 'choosy', 'circumspect', 'concerned', 'conscientious', 'deliberate', 'discreet', 'judicious', 'leery', 'meticulous', 'mindful', 'precise', 'prudent', 'rigorous', 'scrupulous', 'sober', 'thorough', 'thoughtful', 'vigilant', 'wary', 'alert', 'apprehensive', 'assiduous', 'chary', 'conservative', 'cool', 'exacting', 'fastidious', 'finicky', 'fussy', 'guarded', 'heedful', 'observant', 'particular', 'prim', 'protective', 'provident', 'punctilious', 'regardful', 'religious', 'self-disciplined', 'shy', 'solicitous', 'solid']
 const clever = ['able', 'adept', 'adroit', 'alert', 'apt', 'astute', 'brainy', 'brilliant', 'cagey', 'canny', 'capable', 'clever', 'competent', 'crackerjack', 'cunning', 'deep', 'discerning', 'egghead', 'expert', 'foxy', 'gifted', 'good', 'handy', 'intelligent', 'inventive', 'keen', 'knowing', 'knowledgeable', 'many-sided', 'nimble', 'qualified', 'quick-witted', 'rational', 'resourceful', 'sagacious', 'savvy', 'sensible', 'sharp', 'shrewd', 'skilled', 'skillful', 'slick', 'sly', 'smart', 'sprightly', 'talented', 'versatile', 'wise', 'witty']
@@ -20,7 +20,7 @@ function getSynonym (approach) {
   return sample(synonyms)
 }
 
-module.exports = {
+export default {
   careful,
   clever,
   flashy,

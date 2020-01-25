@@ -1,13 +1,11 @@
-const dice = require('./dice')
+import { roll } from './dice'
 
-const sample = (x = []) => {
+export default (x = []) => {
   if (!x || !x.length) {
     return
   }
 
   const l = x.length
-  const i = dice.roll(l)
+  const i = roll(l)
   return x[i - 1]
 }
-
-module.exports = sample

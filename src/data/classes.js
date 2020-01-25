@@ -1,4 +1,4 @@
-const sample = require('../utils/sample')
+import sample from '../utils/sample'
 
 const careful = ['Battlemind', 'Bishop', 'Cavalier', 'Cleric', 'Demon Hunter', 'Disciple', 'Druid', 'Geomancer', 'Guardian', 'Healer', 'Knight', 'Magehunter', 'Medic', 'Oracle', 'Priest', 'Runecaster', 'Seer', 'Sentinel', 'Shaman', 'Skyguard', 'Soulguard', 'Spiritwalker', 'Templar', 'Totemist', 'Warden', 'Weaver']
 const clever = ['Adept', 'Alchemist', 'Arachnomancer', 'Arcanist', 'Archmage', 'Binder', 'Demonologist', 'Diabolist', 'Engineer', 'Inquisitor', 'Loremaster', 'Mage', 'Mystic', 'Navigator', 'Necromancer', 'Puppet Master', 'Sage', 'Spellcaster', 'Summoner', 'Tactician', 'Transmuter', 'Warlock', 'Witch', 'Witch Doctor']
@@ -20,7 +20,7 @@ function getClass (approach) {
   return sample(rslt)
 }
 
-module.exports = {
+export default {
   careful,
   clever,
   flashy,

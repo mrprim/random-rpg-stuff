@@ -1,6 +1,6 @@
-const dice = require('../utils/dice')
+import dice from '../utils/dice'
 
-module.exports = () => {
+export default () => {
   const nm1 = ['ae', 'au', 'ei', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u']
   const nm2 = ['', '', '', 'b', 'bl', 'br', 'bh', 'd', 'dr', 'dh', 'f', 'fr', 'g', 'gh', 'gr', 'gl', 'h', 'hy', 'hr', 'j', 'k', 'kh', 'kr', 'l', 'll', 'm', 'n', 'p', 'pr', 'r', 'rh', 's', 'sk', 'sg', 'sm', 'sn', 'st', 't', 'th', 'thr', 'ty', 'v', 'y']
   const nm3 = ['bl', 'br', 'd', 'db', 'dbr', 'dd', 'ddg', 'dg', 'dl', 'dm', 'dr', 'dv', 'f', 'fd', 'fgr', 'fk', 'fl', 'fn', 'fr', 'fst', 'fv', 'g', 'gb', 'gd', 'gf', 'gg', 'ggv', 'gl', 'gn', 'gr', 'gss', 'gv', 'k', 'kk', 'l', 'lb', 'lc', 'ld', 'ldr', 'lf', 'lfr', 'lg', 'lgr', 'lk', 'll', 'llg', 'llk', 'llv', 'lm', 'ln', 'lp', 'lr', 'ls', 'lsk', 'lsn', 'lst', 'lsv', 'lt', 'lv', 'm', 'md', 'mk', 'ml', 'mm', 'ms', 'n', 'nb', 'nd', 'ndr', 'ng', 'nl', 'nn', 'nng', 'nr', 'nsk', 'nt', 'nv', 'nw', 'p', 'pl', 'pp', 'pr', 'r', 'rb', 'rd', 'rdg', 'rf', 'rg', 'rgr', 'rk', 'rkm', 'rl', 'rls', 'rm', 'rn', 'rng', 'rngr', 'rnh', 'rnk', 'rns', 'rnv', 'rr', 'rst', 'rt', 'rth', 'rtm', 'rv', 's', 'sb', 'sbr', 'sg', 'sgr', 'sk', 'sl', 'sm', 'sn', 'sr', 'ssk', 'st', 'stm', 'str', 'sv', 't', 'tg', 'th', 'thg', 'thn', 'thr', 'thv', 'tm', 'tr', 'tt', 'ttf', 'tv', 'v', 'yv', 'z', 'zg', 'zl', 'zn']

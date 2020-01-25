@@ -1,4 +1,4 @@
-const countFateDieResults = require('../utils/dice').countFateDieResults
+import { countFateDieResults } from '../utils/dice'
 
 const layout = [
   {
@@ -78,7 +78,7 @@ const layout = [
   }
 ]
 
-function getPosFromFateRoll(roll = []) {
+const getPosFromFateRoll = (roll = []) => {
   const { plus, minus } = countFateDieResults(roll)
   return layout.reduce(function (pos, obj) {
     if (obj.column === plus && obj.row === minus) {
@@ -88,13 +88,13 @@ function getPosFromFateRoll(roll = []) {
   }, 'a')
 }
 
-function getFateChartValue(chart = {}, roll = []) {
+const getFateChartValue = (chart = {}, roll = []) => {
   const pos = getPosFromFateRoll(roll)
   const val = chart.filter((value) => value.pos === pos)
   return val.length && val[0]
 }
 
-module.exports = {
+export default {
   layout,
   getFateChartValue,
   getPosFromFateRoll

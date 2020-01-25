@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     pos: 'a',
     value: 'Energy Form',

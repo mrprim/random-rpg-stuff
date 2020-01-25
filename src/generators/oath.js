@@ -8,7 +8,7 @@ const thing = () => {
   return sample([bodyPart, weapon])()
 }
 
-module.exports = () => {
+export default  () => {
   const oaths = [
     'By the ' + toTitleCase(thing()) + ' of ' + toTitleCase(barbarian()) + '!',
     'By ' + toTitleCase(barbarian()) + '!',

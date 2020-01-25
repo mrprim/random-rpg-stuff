@@ -1,8 +1,8 @@
-const spellParts = require('../data/spellParts.fotf')
-const roll = require('../utils/dice').roll
-const sample = require('../utils/sample')
+import spellParts from '../data/spellParts.fotf'
+import { roll } from '../utils/dice'
+import sample from '../utils/sample'
 
-module.exports = () => {
+export default () => {
   const { element } = sample(spellParts)
   const { form } = sample(spellParts)
   const { adjective } = sample(spellParts)

@@ -20,4 +20,4 @@ function wordToTitleCase (word) {
   return word.replace(/(^|\s|-|\/)[a-z]/g, (f) => f.toUpperCase())
 }
 
-module.exports = toTitleCase
+export default toTitleCase

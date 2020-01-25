@@ -1,6 +1,6 @@
-const ssml = require('./ssml')
+import ssml from './ssml'
 
-module.exports = (formatString) => {
+export default (formatString) => {
   if (typeof formatString === 'string') {
     formatString = formatString && formatString.toLowerCase()
   }

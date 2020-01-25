@@ -1,11 +1,12 @@
 {
   "name": "random-rpg-stuff",
-  "version": "0.0.31",
+  "version": "0.1.0",
   "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "mocha --recursive \"./**/*.test.js\""
+    "build": "babel ./src -d ./dist",
+    "dev": "babel -w ./src -d ./dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,20 @@
   },
   "homepage": "https://github.com/mrprim/random-generators#readme",
   "devDependencies": {
-    "expect": "^1.20.2",
-    "mocha": "^5.2.0",
-    "mocha-spectrum-reporter": "^1.0.3"
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/runtime": "^7.7.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "standard": "^14.3.1"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }

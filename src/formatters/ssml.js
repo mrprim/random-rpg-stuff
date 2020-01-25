@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   em: x => '<emphasis level="moderate">' + x + '</emphasis>',
   strong: x => '<emphasis level="strong">' + x + '</emphasis>',
   small: x => '<emphasis level="reduced">' + x + '</emphasis>',

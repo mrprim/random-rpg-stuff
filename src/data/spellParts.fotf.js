@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   { form: 'Armor', element: 'Acid', adjective: 'All-Knowing', name1: 'A-', name2: '-ak' },
   { form: 'Arrow', element: 'Aether', adjective: 'All-Seeing', name1: 'Ab-', name2: '-alto' },
   { form: 'Aura', element: 'Air', adjective: 'Arcane', name1: 'Aga-', name2: '-ana' },

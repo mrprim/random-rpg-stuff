@@ -1,4 +1,4 @@
-var roll = require('../utils/dice').roll
+import roll from '../utils/dice'
 
 var rollThree = () => roll(6) + roll(6) + roll(6)
 
@@ -6,7 +6,7 @@ var between = (val, min, max) => {
   return val >= min && val <= max
 }
 
-function getStarCount() {
+const getStarCount = () => {
   var val = rollThree()
 
   if (between(val, 3, 10)) {
@@ -18,7 +18,7 @@ function getStarCount() {
   }
 }
 
-function getSystemProperties() {
+const getSystemProperties = () => {
   const val1 = rollThree()
   const properties = {}
   let base, a, b
@@ -58,7 +58,8 @@ function getSystemProperties() {
   properties.age = (base) + (roll(6) - a - 1) + (roll(6) - b - 1)
   return properties
 }
-function getStarMass() {
+
+const getStarMass = () => {
   var val1 = rollThree()
   var val2 = rollThree()
 
@@ -150,7 +151,7 @@ function getStarMass() {
   }
 }
 
-function getStarProperties(star, age) {
+const getStarProperties = (star, age) => {
   const properties = {}
   let type, temp, lMin, lMax, mSpan, sSpan, gSpan
 
@@ -486,4 +487,4 @@ function generateSystem() {
   return system
 }
 
-module.exports = generateSystem
+export default generateSystem

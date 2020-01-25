@@ -1,6 +1,6 @@
-const sample = require('../utils/sample')
+import sample from '../utils/sample'
 
-module.exports = () => {
+export default () => {
   return sample([
     'head',
     'mane',
