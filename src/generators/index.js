@@ -9,7 +9,7 @@ import NOUN from './noun'
 import OATH from './oath'
 import CHARACTER_UMDAAR from './umdaarCharacter'
 import WEAPON from './weapon'
-import FOTF_SPELL from './fotfSpell'
+import SPELL_FOTF from './fotfSpell'
 import HAT from './hat'
 
 export default {
@@ -23,6 +23,6 @@ export default {
   [names.OATH]: OATH,
   [names.CHARACTER_UMDAAR]: CHARACTER_UMDAAR,
   [names.WEAPON]: WEAPON,
-  [names.FOTF_SPELL]: FOTF_SPELL,
+  [names.SPELL_FOTF]: SPELL_FOTF,
   [names.HAT]: HAT
 }
