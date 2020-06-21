@@ -1,11 +1,11 @@
 import sample from '../utils/sample'
 
-const careful = ['Battlemind', 'Bishop', 'Cavalier', 'Cleric', 'Demon Hunter', 'Disciple', 'Druid', 'Geomancer', 'Guardian', 'Healer', 'Knight', 'Magehunter', 'Medic', 'Oracle', 'Priest', 'Runecaster', 'Seer', 'Sentinel', 'Shaman', 'Skyguard', 'Soulguard', 'Spiritwalker', 'Templar', 'Totemist', 'Warden', 'Weaver']
-const clever = ['Adept', 'Alchemist', 'Arachnomancer', 'Arcanist', 'Archmage', 'Binder', 'Demonologist', 'Diabolist', 'Engineer', 'Inquisitor', 'Loremaster', 'Mage', 'Mystic', 'Navigator', 'Necromancer', 'Puppet Master', 'Sage', 'Spellcaster', 'Summoner', 'Tactician', 'Transmuter', 'Warlock', 'Witch', 'Witch Doctor']
-const flashy = ['Archer', 'Bard', 'Bladesinger', 'Champion', 'Conjurer', 'Dancer', 'Dragonfire Adept', 'Elementalist', 'Emissary', 'Gladiator', 'Harbinger', 'Jester', 'Lord', 'Marshal', 'Master', 'Mystic Knight', 'Paladin', 'Paragon', 'Prophet', 'Siren', 'Skymage', 'Sorcerer', 'Soulcaster', 'Spelldancer', 'Spellsinger', 'Stormcaster', 'Stormlord', 'Stormsinger', 'Sunlord', 'Sunmaster', 'Warlord']
-const forceful = ['Battlemage', 'Barbarian', 'Berserker', 'Brawler', 'Butcher', 'Crusader', 'Dark Knight', 'Death Knight', 'Doomcaster', 'Doomlord', 'Dragon Knight', 'Hellreaver', 'Legionnaire', 'Marauder', 'Marine', 'Mauler', 'Mercenary', 'Ravager', 'Samurai', 'Slayer', 'Valkyrie', 'Viking', 'Warmage', 'Warmaster', 'Warpriest', 'Warrior', 'Weapon Master']
-const sneaky = ['Agent', 'Bounty Hunter', 'Chameleon', 'Demonbinder', 'Enchanter', 'Ghostwalker', 'Highwayman', 'Infiltrator', 'Ninja', 'Pirate', 'Rogue', 'Scavenger', 'Shadowblade', 'Shadowdancer', 'Shadowsmith', 'Shadowstalker', 'Spellthief', 'Spy', 'Spymaster', 'Stalker', 'Thief', 'Trapsmith', 'Trickster', 'Vampire']
-const quick = ['Beastmaster', 'Blade Dancer', 'Corsair', 'Dragon Rider', 'Gunslinger', 'Hexblade', 'Hunter', 'Illusionist', 'Monk', 'Outrider', 'Ranger', 'Scout', 'Sniper', 'Soulknife', 'Spellsword', 'Swashbuckler', 'Tempest', 'Windwalker']
+const careful = ['battlemind', 'bishop', 'cavalier', 'cleric', 'demon hunter', 'disciple', 'druid', 'geomancer', 'guardian', 'healer', 'knight', 'magehunter', 'medic', 'oracle', 'priest', 'runecaster', 'seer', 'sentinel', 'shaman', 'skyguard', 'soulguard', 'spiritwalker', 'templar', 'totemist', 'warden', 'weaver']
+const clever = ['adept', 'alchemist', 'arachnomancer', 'arcanist', 'archmage', 'binder', 'demonologist', 'diabolist', 'engineer', 'inquisitor', 'loremaster', 'mage', 'mystic', 'navigator', 'necromancer', 'puppet master', 'sage', 'spellcaster', 'summoner', 'tactician', 'transmuter', 'warlock', 'witch', 'witch doctor']
+const flashy = ['archer', 'bard', 'bladesinger', 'champion', 'conjurer', 'dancer', 'dragonfire adept', 'elementalist', 'emissary', 'gladiator', 'harbinger', 'jester', 'lord', 'marshal', 'master', 'mystic knight', 'paladin', 'paragon', 'prophet', 'siren', 'skymage', 'sorcerer', 'soulcaster', 'spelldancer', 'spellsinger', 'stormcaster', 'stormlord', 'stormsinger', 'sunlord', 'sunmaster', 'warlord']
+const forceful = ['battlemage', 'barbarian', 'berserker', 'brawler', 'butcher', 'crusader', 'dark knight', 'death knight', 'doomcaster', 'doomlord', 'dragon knight', 'hellreaver', 'legionnaire', 'marauder', 'marine', 'mauler', 'mercenary', 'ravager', 'samurai', 'slayer', 'valkyrie', 'viking', 'warmage', 'warmaster', 'warpriest', 'warrior', 'weapon master']
+const sneaky = ['agent', 'bounty hunter', 'chameleon', 'demonbinder', 'enchanter', 'ghostwalker', 'highwayman', 'infiltrator', 'ninja', 'pirate', 'rogue', 'scavenger', 'shadowblade', 'shadowdancer', 'shadowsmith', 'shadowstalker', 'spellthief', 'spy', 'spymaster', 'stalker', 'thief', 'trapsmith', 'trickster', 'vampire']
+const quick = ['beastmaster', 'blade dancer', 'corsair', 'dragon rider', 'gunslinger', 'hexblade', 'hunter', 'illusionist', 'monk', 'outrider', 'ranger', 'scout', 'sniper', 'soulknife', 'spellsword', 'swashbuckler', 'tempest', 'windwalker']
 const classes = {
   careful,
   clever,
@@ -15,7 +15,7 @@ const classes = {
   quick
 }
 
-function getClass (approach) {
+const getClass = approach => {
   const rslt = classes[approach.toLowerCase()]
   return sample(rslt)
 }

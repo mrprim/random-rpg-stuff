@@ -1,13 +1,15 @@
 {
-  "name": "random-rpg-stuff",
-  "version": "0.1.2",
+  "name": "@mrprim/random-rpg-stuff",
+  "version": "1.0.0",
   "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./src -d ./dist",
-    "dev": "babel -w ./src -d ./dist",
-    "prepare": "npm run build"
+    "build": "babel ./src -d ./list",
+    "test": "jest /test/*"
   },
+  "files": [
+    "/lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrprim/random-generators.git"
@@ -25,13 +27,13 @@
   },
   "homepage": "https://github.com/mrprim/random-generators#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
-    "@babel/runtime": "^7.7.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "standard": "^14.3.1"
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
+    "jest": "^26.0.1",
+    "standard": "^14.3.4"
   },
   "dependencies": {
     "pluralize": "^8.0.0"

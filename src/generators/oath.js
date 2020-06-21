@@ -1,5 +1,5 @@
 const sample = require('../utils/sample')
-const barbarian = require('./barbarianName')
+const barbarian = require('./name.barbarian')
 const bodyPart = require('./bodyPart')
 const weapon = require('./weapon')
 const toTitleCase = require('../utils/toTitleCase')
@@ -8,7 +8,7 @@ const thing = () => {
   return sample([bodyPart, weapon])()
 }
 
-export default  () => {
+export default () => {
   const oaths = [
     'By the ' + toTitleCase(thing()) + ' of ' + toTitleCase(barbarian()) + '!',
     'By ' + toTitleCase(barbarian()) + '!',

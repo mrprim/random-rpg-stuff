@@ -2,13 +2,11 @@
 import generators from '../generators'
 import sample from './sample'
 
-export default (generatorStrings, options = {}) => {
-  if (typeof generatorStrings === 'string') {
-    generatorStrings = [generatorStrings]
-  }
+export default (names, options = {}) => {
+  const name = getName(names)
+  const generator = generators[name]
 
-  let value = sample(generatorStrings.map(mapGeneratorStringsToRandomValue))
-
+  let value = generator(options)
   if (options.format) {
     value = format(options.format, value)
   }
@@ -24,9 +22,12 @@ const format = (formatters, x) => {
   return formatters.reduce((val, f) => f(val), x)
 }
 
-const mapGeneratorStringsToRandomValue = generatorString => {
-  const generator = generators[generatorString]
-  if (!generator) throw new Error(generatorString + ' is not a generator.')
-
-  return generator()
+const getName = name => {
+  if (Array.isArray(name)) {
+    return sample(name.map(getName))
+  } else if (typeof name === 'object') {
+    return sample(Object.values(name).map(getName))
+  } else {
+    return name.toUpperCase()
+  }
 }

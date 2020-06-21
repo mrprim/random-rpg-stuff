@@ -1,69 +1,69 @@
 export default [
   {
     pos: 'a',
-    value: 'Salamander, Hellbender',
-    approach: 'Flashy'
+    value: 'salamander, hellbender',
+    approach: 'flashy'
   }, {
     pos: 'b',
-    value: 'Lizard',
-    subvalue: 'Iguana, Komodo Dragon, Monitor',
-    approach: 'Careful'
+    value: 'lizard',
+    subvalue: 'iguana, komodo dragon, monitor',
+    approach: 'careful'
   }, {
     pos: 'c',
-    value: 'Chameleon',
-    approach: 'Sneaky'
+    value: 'chameleon',
+    approach: 'sneaky'
   }, {
     pos: 'd',
-    value: 'Toad',
-    approach: 'Clever'
+    value: 'toad',
+    approach: 'clever'
   }, {
     pos: 'e',
-    value: 'Turtle, Tortoise',
-    approach: 'Clever'
+    value: 'turtle, tortoise',
+    approach: 'clever'
   }, {
     pos: 'f',
-    value: 'Quadruped Herbivores',
-    subvalue: 'Triceratops, Stegadon, Ankylosaurus',
-    approach: 'Careful'
+    value: 'quadruped herbivores',
+    subvalue: 'triceratops, stegadon, ankylosaurus',
+    approach: 'careful'
   }, {
     pos: 'g',
-    value: 'T-Rex, Allosaurus, Dimetrodon',
-    approach: 'Forceful'
+    value: 't-rex, allosaurus, dimetrodon',
+    approach: 'forceful'
   }, {
     pos: 'h',
-    value: 'Snake',
-    subvalue: 'Cobra, Viper, Python',
-    approach: 'Clever'
+    value: 'snake',
+    subvalue: 'cobra, viper, python',
+    approach: 'clever'
   }, {
     pos: 'i',
-    value: 'Crocodile, Alligator, Gharial',
-    approach: 'Forceful'
+    value: 'crocodile, alligator, gharial',
+    approach: 'forceful'
   }, {
     pos: 'j',
-    value: 'Pterodactly, Pterosaur, Archaeopteryx',
-    approach: 'Flashy'
+    value: 'pterodactly, pterosaur, archaeopteryx',
+    approach: 'flashy'
   }, {
     pos: 'k',
-    value: 'Frog',
-    subvalue: 'Bull Frog, Poison Arrow',
-    approach: 'Sneaky'
+    value: 'frog',
+    subvalue: 'bull frog, poison arrow frog',
+    approach: 'sneaky'
   }, {
     pos: 'l',
-    value: 'Raptor',
-    subvalue: 'Deinonychus, Velociraptor, Oviraptor',
-    approach: 'Clever'
+    value: 'raptor',
+    subvalue: 'deinonychus, velociraptor, oviraptor',
+    approach: 'clever'
   }, {
     pos: 'm',
-    value: 'Pachycephalosaurus, Iguanadon, Hadrosaur',
-    approach: 'Quick'
+    value: 'pachycephalosaurus, iguanadon, hadrosaur',
+    approach: 'quick'
   }, {
     pos: 'n',
-    value: 'Newt',
-    approach: 'Quick'
+    value: 'newt',
+    approach: 'quick'
   }, {
     pos: 'o',
-    value: 'Marine Reptile',
-    subvalue: 'Pliosaur, Plesiosaur, Ichthyosaur',
-    approach: 'Sneaky'
+    value: 'marine reptile',
+    subvalue: 'pliosaur, plesiosaur, ichthyosaur',
+    approach: 'sneaky'
   }
 ]

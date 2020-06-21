@@ -1,10 +1,4 @@
-const mocha = require('mocha')
-const expect = require('expect')
-
-const describe = mocha.describe
-const it = mocha.it
-
-const sample = require('./sample')
+const sample = require('../../src/utils/sample')
 
 describe('sample', () => {
   it('no part should be undefined/NaN', function () {

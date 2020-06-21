@@ -1,5 +1,5 @@
 const sample = require('../utils/sample')
-const nameGenerator = require('./barbarianName')
+const nameGenerator = require('./name.barbarian')
 const roll4dF = require('../utils/dice').roll4dF
 
 const getFateChartValue = require('../data/layout.fate').getFateChartValue
@@ -24,19 +24,19 @@ function getName () {
 }
 
 function formatAnimalString (animal) {
-  let animalOptions = animal.subvalue ? animal.subvalue.split(',') : animal.value.split(',')
+  const animalOptions = animal.subvalue ? animal.subvalue.split(',') : animal.value.split(',')
 
   return sample(animalOptions).trim()
 }
 
 function getApproaches (setupApproaches) {
   const rslt = []
-  let values = [3, 2, 2, 1, 1, 0]
+  const values = [3, 2, 2, 1, 1, 0]
   let approaches = ['Careful', 'Clever', 'Flashy', 'Forceful', 'Quick', 'Sneaky']
 
   while (setupApproaches.length > 0) {
-    let approach = sample(setupApproaches)
-    let value = values[0]
+    const approach = sample(setupApproaches)
+    const value = values[0]
     rslt.push({ approach, value })
     setupApproaches = setupApproaches.filter(a => a !== approach)
     approaches = approaches.filter(a => a !== approach)
@@ -44,8 +44,8 @@ function getApproaches (setupApproaches) {
   }
 
   while (approaches.length > 0) {
-    let approach = sample(approaches)
-    let value = values[0]
+    const approach = sample(approaches)
+    const value = values[0]
     rslt.push({ approach, value })
     approaches = approaches.filter(a => a !== approach)
     values.shift()
@@ -114,7 +114,7 @@ function characterGenerator () {
   const stunts = []
   //  const aspects = {}
   let approaches = []
-  let setupApproaches = []
+  const setupApproaches = []
   let firstAnimalChart
 
   const bioform = getFateChartValue(bioforms, roll4dF())
@@ -172,4 +172,4 @@ function characterGenerator () {
   return character
 }
 
-export default  characterGenerator
+export default characterGenerator
