@@ -9,6 +9,11 @@ import NOUN from './noun'
 import OATH from './oath'
 import CHARACTER_UMDAAR from './character.umdaar'
 import CHARACTER_NOBILIS_POWER from './character.nobilis.power'
+import CHARACTER_NOBILIS_IMPERATOR from './character.nobilis.imperator'
+import CHARACTER_NOBILIS_MIMIC from './character.nobilis.mimic'
+import CHARACTER_NOBILIS_STRATEGIST from './character.nobilis.strategist'
+import CHARACTER_NOBILIS_WARMAIN from './character.nobilis.warmain'
+import CHARACTER_NOBILIS_ZU from './character.nobilis.zu'
 import WEAPON from './weapon'
 import SPELL_FOTF from './spell.fotf'
 import HAT from './hat'
@@ -23,6 +28,11 @@ export default {
   [names.NOUN]: NOUN,
   [names.OATH]: OATH,
   [names.CHARACTER.UMDAAR]: CHARACTER_UMDAAR,
+  [names.CHARACTER.NOBILIS.IMPERATOR]: CHARACTER_NOBILIS_IMPERATOR,
+  [names.CHARACTER.NOBILIS.MIMIC]: CHARACTER_NOBILIS_MIMIC,
+  [names.CHARACTER.NOBILIS.STRATEGIST]: CHARACTER_NOBILIS_STRATEGIST,
+  [names.CHARACTER.NOBILIS.WARMAIN]: CHARACTER_NOBILIS_WARMAIN,
+  [names.CHARACTER.NOBILIS.ZU]: CHARACTER_NOBILIS_ZU,
   [names.CHARACTER.NOBILIS.POWER]: CHARACTER_NOBILIS_POWER,
   [names.WEAPON]: WEAPON,
   [names.SPELL.FOTF]: SPELL_FOTF,
