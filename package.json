@@ -4,7 +4,7 @@
   "description": "A library to randomly generate names, characters, monsters and all manner of rpg stuff",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./src -d ./list",
+    "build": "babel ./src -d ./lib",
     "test": "jest /test/*"
   },
   "files": [

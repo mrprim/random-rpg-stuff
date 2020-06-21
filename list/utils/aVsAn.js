@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;var _default=function _default(word){if(!word)return"a";return["a","e","i","o","u"].indexOf(word[0].toLowerCase())>=0?"an":"a"};exports["default"]=_default;
