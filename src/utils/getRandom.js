@@ -11,7 +11,7 @@ export default (names, options = {}) => {
     value = format(options.format, value)
   }
 
-  return value
+  return buildResult(name, options, value)
 }
 
 const format = (formatters, x) => {
@@ -29,5 +29,15 @@ const getName = name => {
     return sample(Object.values(name).map(getName))
   } else {
     return name.toUpperCase()
+  }
+}
+
+const buildResult = (name, options, value) => {
+  if (!options.details) return value
+
+  return {
+    name,
+    options,
+    value
   }
 }
