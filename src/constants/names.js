@@ -29,6 +29,7 @@ export const CHARACTER = {
 }
 
 export const NAME = {
+  EXCRUCIAN: 'NAME.EXCRUCIAN',
   BARBARIAN: 'NAME.BARBARIAN'
 }
 

@@ -9,7 +9,7 @@ export default (names, options = {}) => {
   let result = generator(options)
   if (options.format) {
     if (typeof result === 'object') {
-      result.value = format(options.format, result.value)
+      result.value = format(options.format, result.value, result)
     } else {
       result = format(options.format, result)
     }
@@ -18,12 +18,12 @@ export default (names, options = {}) => {
   return buildResult(name, options, result)
 }
 
-const format = (formatters, x) => {
+const format = (formatters, value, data) => {
   if (typeof formatters === 'function') {
     formatters = [formatters]
   }
 
-  return formatters.reduce((val, f) => f(val), x)
+  return formatters.reduce((val, f) => f(val), value)
 }
 
 const getName = name => {

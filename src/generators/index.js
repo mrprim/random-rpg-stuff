@@ -1,6 +1,7 @@
 import * as names from '../constants/names'
 import ANIMAL from './animal'
 import NAME_BARBARIAN from './name.barbarian'
+import NAME_EXCRUCIAN from './name.excrucian'
 import BODY_PART from './bodyPart'
 import CLASS from './class'
 import DESCRIPTOR from './descriptor'
@@ -21,6 +22,7 @@ import HAT from './hat'
 export default {
   [names.ANIMAL]: ANIMAL,
   [names.NAME.BARBARIAN]: NAME_BARBARIAN,
+  [names.NAME.EXCRUCIAN]: NAME_EXCRUCIAN,
   [names.BODYPART]: BODY_PART,
   [names.CLASS]: CLASS,
   [names.DESCRIPTOR]: DESCRIPTOR,
