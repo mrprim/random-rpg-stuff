@@ -1,4 +1,4 @@
-const barbarian = require('./barbarianName')
+import barbarian from '../../src/generators/name.barbarian'
 
 describe('generators.names.barbarian', () => {
   it('should return a string', function () {

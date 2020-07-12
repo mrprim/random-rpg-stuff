@@ -6,12 +6,16 @@ export default (names, options = {}) => {
   const name = getName(names)
   const generator = generators[name]
 
-  let value = generator(options)
+  let result = generator(options)
   if (options.format) {
-    value = format(options.format, value)
+    if (typeof value === 'object') {
+      result.value = format(options.format, result.value)
+    } else {
+      result = format(options.format, result)
+    }
   }
 
-  return buildResult(name, options, value)
+  return buildResult(name, options, result)
 }
 
 const format = (formatters, x) => {

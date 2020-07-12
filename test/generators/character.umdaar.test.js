@@ -1,4 +1,4 @@
-const umdaar = require('./umdaar')
+import umdaar from '../../src/generators/character.umdaar'
 
 describe('generators.characters.umdaar', () => {
   it('should return an object', function () {

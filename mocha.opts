@@ -1,3 +1,0 @@
---colors
--R mocha-spectrum-reporter
-src/**/*.test.js

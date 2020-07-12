@@ -94,6 +94,12 @@ const getFateChartValue = (chart = {}, roll = []) => {
   return val.length && val[0]
 }
 
+export {
+  layout,
+  getFateChartValue,
+  getPosFromFateRoll
+}
+
 export default {
   layout,
   getFateChartValue,

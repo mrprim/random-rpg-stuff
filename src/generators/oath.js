@@ -1,8 +1,8 @@
-const sample = require('../utils/sample')
-const barbarian = require('./name.barbarian')
-const bodyPart = require('./bodyPart')
-const weapon = require('./weapon')
-const toTitleCase = require('../utils/toTitleCase')
+import sample from '../utils/sample'
+import barbarian from './name.barbarian'
+import bodyPart from './bodyPart'
+import weapon from './weapon'
+import toTitleCase from '../utils/toTitleCase'
 
 const thing = () => {
   return sample([bodyPart, weapon])()

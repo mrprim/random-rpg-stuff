@@ -1,35 +1,33 @@
-const sample = require('../utils/sample')
-const nameGenerator = require('./name.barbarian')
-const roll4dF = require('../utils/dice').roll4dF
+import sample from '../utils/sample'
+import nameGenerator from './name.barbarian'
+import { roll4dF } from '../utils/dice'
+import { getFateChartValue } from '../data/layout.fate'
+import { getSynonym } from '../data/approaches.thesaurus'
+import { getClass } from '../data/classes'
 
-const getFateChartValue = require('../data/layout.fate').getFateChartValue
-const getSynonym = require('../data/approaches.thesaurus').getSynonym
-const getClass = require('../data/classes').getClass
+import bioforms from '../data/bioforms.fate'
+import bugsAndFish from '../data/bugsAndFish.fate'
+import herpsAndDinos from '../data/herpsAndDinos.fate'
+import birdsAndMammals from '../data/birdsAndMammals.fate'
+import powers from '../data/powers.fate'
+import weapons from '../data/weapons.fate'
+import adaptations from '../data/adaptations.fate'
 
-const bioforms = require('../data/bioforms.fate')
-const bugsAndFish = require('../data/bugsAndFish.fate')
-const herpsAndDinos = require('../data/herpsAndDinos.fate')
-const birdsAndMammals = require('../data/birdsAndMammals.fate')
-const powers = require('../data/powers.fate')
-const weapons = require('../data/weapons.fate')
-const adaptations = require('../data/adaptations.fate')
 const animalCharts = [bugsAndFish, herpsAndDinos, birdsAndMammals]
 const stuntCharts = [powers, weapons, adaptations]
 
-const formatters = require('../formatters')
-
-function getName () {
+const getName = () => {
   const name = nameGenerator()
   return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
-function formatAnimalString (animal) {
+const formatAnimalString = animal => {
   const animalOptions = animal.subvalue ? animal.subvalue.split(',') : animal.value.split(',')
 
   return sample(animalOptions).trim()
 }
 
-function getApproaches (setupApproaches) {
+const getApproaches = setupApproaches => {
   const rslt = []
   const values = [3, 2, 2, 1, 1, 0]
   let approaches = ['Careful', 'Clever', 'Flashy', 'Forceful', 'Quick', 'Sneaky']
@@ -69,15 +67,15 @@ function getApproaches (setupApproaches) {
   return rslt
 }
 
-function getDescriptorFromApproaches (approaches) {
+const getDescriptorFromApproaches = approaches => {
   return getSynonym(approaches[0].approach)
 }
 
-function getClassFromApproaches (approaches) {
+const getClassFromApproaches = approaches => {
   return getClass(approaches[0].approach)
 }
 
-function getStunt (previousStunt) {
+const getStunt = previousStunt => {
   const stuntChart = sample(stuntCharts)
   let stunt = getFateChartValue(stuntChart, roll4dF())
 
@@ -95,20 +93,20 @@ function getStunt (previousStunt) {
   return stunt
 }
 
-function getAspects (character = {}) {
+const getAspects = (character = {}) => {
   return {
     bioform: getMainConcept(character)
   }
 }
 
-function getMainConcept (character) {
+const getMainConcept = (character) => {
   const { type, animals, descriptor, characterClass } = character
   const animalString = animals.length ? animals.join('/').trim() + '-' : ''
 
   return (descriptor + ' ' + animalString + type + ' ' + characterClass).toLowerCase()
 }
 
-function characterGenerator () {
+const characterGenerator = options => {
   const character = {}
   const animals = []
   const stunts = []
@@ -160,16 +158,20 @@ function characterGenerator () {
   character.descriptor = getDescriptorFromApproaches(approaches)
   character.characterClass = getClassFromApproaches(approaches)
   character.aspects = getAspects(character)
-  character.toString = function (format) {
-    const { type, animals, descriptor, characterClass } = character
-    const animalString = animals.length ? animals.join('/').trim() + '-' : ''
-    const f = formatters(format)
 
-    const bioform = (descriptor + ' ' + f.t(animalString, animalString.replace('/', '-')) + type + ' ' + characterClass).toLowerCase()
-
-    return f.strong(this.name) + ' the ' + bioform
+  return {
+    value: getValue(character),
+    detail: character
   }
-  return character
+}
+
+const getValue = character => {
+  const { name, type, animals, descriptor, characterClass } = character
+
+  const animalString = animals.length ? animals.join('/').trim() + '-' : ''
+  const bioform = descriptor + ' ' + animalString.replace('/', '-') + type + ' ' + characterClass
+
+  return name + ' the ' + bioform
 }
 
 export default characterGenerator

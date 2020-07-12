@@ -20,7 +20,7 @@ const getClass = approach => {
   return sample(rslt)
 }
 
-export default {
+export {
   careful,
   clever,
   flashy,

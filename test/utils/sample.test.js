@@ -1,4 +1,4 @@
-const sample = require('../../src/utils/sample')
+import sample from '../../src/utils/sample'
 
 describe('sample', () => {
   it('no part should be undefined/NaN', function () {

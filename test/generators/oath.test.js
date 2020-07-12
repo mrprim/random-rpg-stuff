@@ -1,4 +1,4 @@
-const oath = require('../../src/generators/oath')
+import oath from '../../src/generators/oath'
 
 describe('generators.misc.oath', () => {
   it('should return a string', function () {

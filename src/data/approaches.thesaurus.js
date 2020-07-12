@@ -20,7 +20,7 @@ function getSynonym (approach) {
   return sample(synonyms)
 }
 
-export default {
+export {
   careful,
   clever,
   flashy,
