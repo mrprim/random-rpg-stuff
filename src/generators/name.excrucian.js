@@ -332,7 +332,8 @@ const meanings = {
   TREASUREHOUSE: ['TREASURE-HOUSE'],
   UNKNOWN: ['UNKNOWN', '???'],
   LIGHT: ['BUT IN A LIGHT-HEARTED WAY'],
-  NOMINALIZING: ['ONE']
+  NOMINALIZING: ['ONE'],
+  WATERY_VOID: ['WATERY VOID']
 }
 
 const getPart = category => {
