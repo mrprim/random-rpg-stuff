@@ -6,7 +6,7 @@ const primary = {
   ANCIENT: ['Ald', 'Cam', 'Gamal'],
   ARMY: ['Ar', 'Arg', 'Har', 'Harja'],
   ATTENTION: ['Aid', 'Ed'],
-  AXE_BLOOD: ['Bil', 'Bel', 'Pel'],
+  AXEBLOOD: ['Bil', 'Bel', 'Pel'],
   BATTLE: ['Ad', 'Hadu', 'Hath', 'Ba', 'Bad', 'Bat', 'Paid', 'Pat'],
   BEAUTY: ['Beu'],
   BELOVED: ['Leov', 'Leub', 'Liuv'],
@@ -17,6 +17,33 @@ const primary = {
   BRAVE: ['Amal', 'Athal', 'Ata', 'Amm', 'Hem', 'Hart', 'Herle'],
   BRIGHT: ['Glad'],
   BURNING: ['Bran', 'Brands', 'Gabr'],
+  CANON: ['Sidi', 'Sido', 'Situ'],
+  CEASELESS: ['Fasti', 'Fravi'],
+  CHILD: ['Chi', 'Ci', 'K'],
+  CLOTHING: ['Vada'],
+  COLD: ['Col'],
+  COMRADE: ['Gad', 'Gat', 'Gath'],
+  CORN: ['Cor'],
+  COSMIC: ['Como'],
+  DAMAGED: ['Tair'],
+  DAWN: ['Seg', 'Sig', 'Sigis'],
+  DEATHWRIGHT: ['Tarbi', 'Tharbi', 'Tribi'],
+  DEDICATION: ['Vil', 'Wilg'],
+  DESERT: ['Aor', 'Aur', 'Oer', 'Ur'],
+  DESCENDING: ['Drus', 'Dres', 'Drais'],
+  DOMINION: ['Czon', 'Sthen'],
+  DOUBLE: ['Du'],
+  DREADFUL: ['Cad'],
+  DREAM: ['Eid'],
+  DREAMDRENCHED: ['Chlod', 'Chloth', 'Hloth', 'Hlud', 'Hle', 'Le', 'Hraid', 'Hreid', 'Hroth', 'Hruoth', 'Roth', 'Rothes', 'Rod', 'Ruod', 'Rud', 'Mar'],
+  EASTERN: ['Astro', 'Ostro'],
+  EGO: ['Scal', 'Scel', 'Scar'],
+  ELEVATED: ['Hach'],
+  EMANATION: ['Clar'],
+  ENORMOUS: ['Abr', 'Aber'],
+  ETERNAL: ['Eo', 'Eu', 'Euth', 'Ev', 'I', 'Io', 'Iu', 'Iv'],
+  EXTREME: ['Magn'],
+  FAMINEBRINGING: ['Hun'],
   FANTASTIC: ['Recca', 'Recce', 'Reki', 'Reic', 'Rici', 'Riq'],
   FASTMOVING: ['Ra', 'Ran', 'Rana', 'Rani'],
   FEARSOME: ['Mata'],
@@ -29,7 +56,7 @@ const primary = {
   FORTHCOMING: ['Bi'],
   FUZZY: ['Lamp'],
   GENEROUS: ['Gaf', 'Geb', 'Gef'],
-  GENTLE_KIND: ['Sel'],
+  GENTLE: ['Sel'],
   GHOST: ['Gual', 'Qual', 'Val', 'Wal'],
   GLEAMING: ['Glis'],
   GOLDEN: ['Corin'],
@@ -80,7 +107,7 @@ const primary = {
   REQUIEM: ['Sis', 'Ses'],
   RESTFUL: ['Rhim'],
   RESULT: ['Ioch', 'Yoch'],
-  RING_SHAPED: ['Baug', 'Hring', 'Ring'],
+  RINGSHAPED: ['Baug', 'Hring', 'Ring'],
   RIVER: ['Ib'],
   ROYAL: ['Aquinc', 'Quinc'],
   RUINED: ['Laid', 'Laith'],
@@ -149,7 +176,7 @@ const secondary = {
   BEAN: ['bian'],
   BORDER: ['marca', 'marka', 'merca'],
   CHARGE: ['vindra'],
-  CHILD: ['chan', 'chun', 'cine', 'kun'],
+  CHILD_SECONDARY: ['chan', 'chun', 'cine', 'kun'],
   CHRYSALIS: ['man'],
   CLAY: ['cadican', 'gadigan'],
   COMMANDER: ['aric', 'eric', 'ric', 'rich', 'ricus', 'ry'],
@@ -189,7 +216,6 @@ const secondary = {
   LOVE: ['bia', 'leova', 'leuva', 'lieva', 'liva', 'live', 'luva'],
   MERRIMENT: ['ba', 'bas', 'bias', 'bius'],
   MONSTER: ['is'],
-  ONE: ['in'],
   PASSAGE: ['hlid', 'hlida', 'hlith', 'hlitha', 'litha', 'lithae'],
   PEACE: ['sten', 'stena', 'stina'],
   PERSEVERANCE: ['fredus', 'frid', 'fridia', 'frida', 'frithila', 'fidil', 'ph', 'phrasia'],
@@ -229,6 +255,86 @@ const secondary = {
   UNKNOWN: ['pa', 'pas']
 }
 
+const meanings = {
+  ARMY: ['ARMY', 'THE ARMY\'S', 'ARMY\'S'],
+  AXEBLOOD: ['AXE-BLOOD'],
+  BOLD: ['BOLD', 'BELT'],
+  BLADE: ['BLADE', 'BLADE-STREWN'],
+  CANON: ['CANON', 'WAY OF', 'WAYS OF', 'WAY OF THE', 'WAYS OF THE'],
+  CHILD: ['CHILD', 'CHILD OF', 'CHILD OF THE'],
+  CHILD_SECONDARY: ['CHILD'],
+  CLOTHING: ['CLOTHING', 'CLOTHING OF', 'CLOTHING OF THE'],
+  CORN: ['CORN', 'CORN OF', 'CORN OF THE', 'WHEAT OF', 'WHEAT OF THE'],
+  DAWN: ['DAWN', 'DAWN\'S'],
+  DEATHWRIGHT: ['DEATHWRIGHT', 'DEATHWRIGHT\'S'],
+  DEDICATION: ['DEDICATION', 'DEDICATED TO', 'DEDICATED TO THE'],
+  DESCENDING: ['DESCENDING', 'FALLING'],
+  DOMINION: ['DOMINION', 'DOMINION\'S'],
+  DREAMDRENCHED: ['DREAM-DRENCHED', 'THE DREAM-DRENCHED'],
+  EMANATION: ['EMANATION', 'EMANATION OF', 'EMANATION OF THE'],
+  FASTMOVING: ['FAST-MOVING'],
+  FEAST: ['FEAST', 'DINNER'],
+  GENTLE: ['GENTLE', 'KIND'],
+  GRINDER: ['GRINDER', 'GRINDER OF', 'GRINDER OF THE'],
+  GUARDIAN: ['GUARDIAN', 'GUARDIAN\'S'],
+  HEART: ['HEART', 'HEART\'S'],
+  HELM: ['HELM', 'MASK-WEARING', 'HAT-WEARING'],
+  HOMEBREWED: ['HOME-BREWED'],
+  HOME: ['HOME\'S'],
+  KIN: ['KIN', 'KIN TO', 'KIN TO THE'],
+  LAW: ['LAW', 'LAW OF', 'LAW OF THE'],
+  LIKENESS: ['LIKENESS', 'LIKE A', 'LIKE THE', 'LIKE AN'],
+  LOREKEEPER: ['LORE-KEEPER\'S'],
+  LOSTLING: ['LOSTLING', 'LOSTLING\'S'],
+  MANOR: ['MANOR', 'MANOR\'S'],
+  NEST: ['NEST', 'NEST\'S'],
+  ONE: ['ONE', 'A SINGLE', 'SINGULAR'],
+  ORACLE: ['ORACLE', 'ORACLE OF', 'ORACLE OF THE'],
+  PEOPLE: ['PEOPLE', 'THE PEOPLE\'S'],
+  PEOPLE_OF_THE_END: [' OF THE PEOPLE OF THE END'],
+  PEOPLE_OF_THE_VOID: [' OF THE PEOPLE OF THE VOID'],
+  PILLAR: ['PILLAR', 'PILLAR\'S'],
+  PLAY: ['PLAY', 'GAMING', 'GAMING THE'],
+  RAT: ['RAT', 'RAT\'S'],
+  REDEMPTION: ['REDEMPTION', 'REDEEMER OF', 'REDEEMER OF THE'],
+  REMNANT: ['REMNANT', 'REMNANT OF', 'REMNANT OF THE'],
+  REQUIEM: ['REQUIEM', 'REQUIEM FOR', 'REQUIEM FOR THE'],
+  RESULT: ['RESULT', 'BECAUSE OF THE WHOLE THING WITH', 'BECAUSE OF THE WHOLE THING WITH THE'],
+  RINGSHAPED: ['RING-SHAPED'],
+  SCHOLAR: ['SCHOLAR', 'SCHOLAR OF', 'SCHOLAR OF THE'],
+  SEIZE: ['SEIZE', 'SEIZE THE'],
+  SHELLCOVERED: ['SHELL-COVERED'],
+  SILVERED: ['SILVERED', 'THE SILVERED'],
+  STRATEGIST: ['STRATEGIST', 'STRATEGIST\'S'],
+  SUMMER: ['SUMMER', 'SUMMER\'S'],
+  THORNCOVERED: ['THORN-COVERED'],
+  TOWER: ['\'S Tower'],
+  TRAVELER: ['TRAVELER', 'TRAVELER\'S'],
+  UNWATCHED: ['UNWATCHED', 'THE UNWATCHED'],
+  URGED: ['URGED', 'URGED TO', 'URGED TO THE'],
+  VALUING_THE_WORLDLY: ['VALUING THE WORLDLY'],
+  VAMPIRE: ['VAMPIRE', 'THE VAMPIRIC', 'VAMPIRIC'],
+  VICTORY: ['VICTORY', 'VICTORY OF', 'VICTORY OF THE'],
+  VOICE: ['VOICE', 'VOICE OF', 'VOICE OF THE'],
+  WANDERER: ['WANDERER', 'WANDERER\'S'],
+  WATCH: ['WATCH', 'EYES ON', 'EYES ON THE'],
+  WEALTH: ['WEALTH', 'WEALTH BRINGS', 'WEALTH BRINGS THE'],
+  WINDBLOWN: ['WIND-BLOWN'],
+  WOLF: ['WOLF', 'HOUND'],
+  WORLDENDING: ['WORLD-ENDING'],
+  WORLD: ['WORLD', 'WORLD\'S'],
+  WYRDLING: ['WYRLDLING', 'WYRDLING\'S'],
+  YES_BUT: ['YES, BUT', 'YES, BUT WHAT ABOUT', 'YES, BUT WHAT ABOUT THE'],
+  BORDER: ['BORDER', 'BORDER-KEEPER'],
+  HAT: ['HAT', 'HELM', 'MASK'],
+  LOCAL_ARISTOCRAT: ['LOCAL ARISTOCRAT'],
+  POSSESSIVE: ['\'S'],
+  TREASUREHOUSE: ['TREASURE-HOUSE'],
+  UNKNOWN: ['UNKNOWN', '???'],
+  LIGHT: ['BUT IN A LIGHT-HEARTED WAY'],
+  NOMINALIZING: ['ONE']
+}
+
 const getPart = category => {
   const arr = Object.entries(category).map(([definition, values]) => ({ definition, values }))
   const data = sample(arr)
@@ -243,26 +349,54 @@ const vowelRegex = /^[aeiouy]$/
 const isConsonant = v => !vowelRegex.exec(v)
 
 const getSuffix = () => {
-  const k = roll(20)
+  const k = roll(30)
 
   if (k === 1) {
-    return { definition: '[DIMINUTIVE]', value: 'din' }
+    return { definition: 'DIMINUTIVE', value: 'din' }
   } else if (k === 2) {
-    return { definition: '[FLOATING]', value: sample(['ia', 'ias', 'ius', 'ja', 'ya']) }
+    return { definition: 'FLOATING', value: sample(['ia', 'ias', 'ius', 'ja', 'ya']) }
   } else if (k === 3) {
-    return { definition: '[LIGHT]', value: sample(['lin', 'line', 'llino', 'llinus', 'lona']) }
+    return { definition: 'LIGHT', value: sample(['lin', 'line', 'llino', 'llinus', 'lona']) }
   } else if (k === 4) {
-    return { definition: '[NOMINALIZING]', value: sample(['in', '\'in']) }
+    return { definition: 'NOMINALIZING', value: sample(['in', '\'in']) }
   } else if (k === 5) {
-    return { definition: '[PATRONIZING]', value: sample(['la', 'las', 'lash', 'lios', 'lla', 'ely']) }
+    return { definition: 'PATRONIZING', value: sample(['la', 'las', 'lash', 'lios', 'lla', 'ely']) }
   } else if (k === 6) {
-    return { definition: '[POSSESSIVE]', value: sample(['ca', 'ica', 'ikas', 'ka']) }
+    return { definition: 'POSSESSIVE', value: sample(['ca', 'ica', 'ikas', 'ka']) }
   } else if (k === 7) {
-    return { definition: '[SIMPLE]', value: sample(['us', 'dus']) }
+    return { definition: 'SIMPLE', value: sample(['us', 'dus', '']) }
   } else {
     return getPart(secondary)
   }
 }
+
+const getMeaning = (def1, def2) => {
+  if (['PEOPLE_OF_THE_END', 'PEOPLE_OF_THE_VOID', 'TOWER'].includes(def1)) {
+    return translateMeaning(def2) + translateMeaning(def1)
+  } else if (def2 === 'POSSESSIVE') {
+    return translateMeaning(def1) + translateMeaning(def2)
+  } else if (def2 === 'DIMINUTIVE') {
+    const meaning = sample('DEAR ', 'SWEET ') + translateMeaning(def1)
+    return meaning + '.  JUST ' + meaning + '.'
+  } else if (def2 === 'FLOATING') {
+    const meaning = translateMeaning(def1)
+    return meaning + '.  JUST ' + meaning + '.'
+  } else if (def2 === 'PATRONIZING') {
+    const meaning = translateMeaning(def1)
+    return sample(['LITTLE ' + meaning, meaning + 'LET', 'PRECIOUS ' + meaning])
+  } else if (def2 === 'POSSESSIVE') {
+    return 'MY ' + translateMeaning(def1)
+  } else if (def2 === 'SIMPLE') {
+    return translateMeaning(def1)
+  }
+
+  return translateMeaning(def1) + ' ' + translateMeaning(def2)
+}
+
+const translateMeaning = def => {
+  return meanings[def] ? sample(meanings[def]) : def
+}
+
 export default () => {
   const prefix = getPart(primary)
   const suffix = getSuffix()
@@ -272,10 +406,10 @@ export default () => {
     mid = sample(['a', 'e', 'i', 'o', 'u', 'y', 'ae', 'io', 'oo', 'ie', 'ou'])
   }
   const name = prefix.value + mid + suffix.value
-  const luthe = prefix.definition + ' / ' + suffix.definition
+  const meaning = getMeaning(prefix.definition, suffix.definition)
   return {
-    value: name + ' (' + luthe + ')',
+    value: name + ' (' + meaning + ')',
     name,
-    luthe
+    meaning
   }
 }
