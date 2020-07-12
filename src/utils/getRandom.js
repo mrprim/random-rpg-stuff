@@ -36,7 +36,7 @@ const getName = name => {
   }
 }
 
-const buildResult = (name, options, result) => {
+const buildResult = (generatorName, options, result) => {
   if (typeof result !== 'object') {
     result = { value: result }
   }
@@ -44,7 +44,7 @@ const buildResult = (name, options, result) => {
   if (!options.details) return result.value
 
   return {
-    name,
+    generatorName,
     options,
     ...result
   }
