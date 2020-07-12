@@ -8,7 +8,7 @@ export default (names, options = {}) => {
 
   let result = generator(options)
   if (options.format) {
-    if (typeof value === 'object') {
+    if (typeof result === 'object') {
       result.value = format(options.format, result.value)
     } else {
       result = format(options.format, result)
