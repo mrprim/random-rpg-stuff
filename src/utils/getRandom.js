@@ -36,12 +36,16 @@ const getName = name => {
   }
 }
 
-const buildResult = (name, options, value) => {
-  if (!options.details) return value
+const buildResult = (name, options, result) => {
+  if (typeof result !== 'object') {
+    result = { value: result }
+  }
+
+  if (!options.details) return result.value
 
   return {
     name,
     options,
-    value
+    ...result
   }
 }
