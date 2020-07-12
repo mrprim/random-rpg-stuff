@@ -328,7 +328,6 @@ const meanings = {
   BORDER: ['BORDER', 'BORDER-KEEPER'],
   HAT: ['HAT', 'HELM', 'MASK'],
   LOCAL_ARISTOCRAT: ['LOCAL ARISTOCRAT'],
-  POSSESSIVE: ['\'S'],
   TREASUREHOUSE: ['TREASURE-HOUSE'],
   UNKNOWN: ['UNKNOWN', '???'],
   LIGHT: ['BUT IN A LIGHT-HEARTED WAY'],
@@ -372,23 +371,22 @@ const getSuffix = () => {
 }
 
 const getMeaning = (def1, def2) => {
-  if (['PEOPLE_OF_THE_END', 'PEOPLE_OF_THE_VOID', 'TOWER'].includes(def1)) {
-    return translateMeaning(def2) + translateMeaning(def1)
-  } else if (def2 === 'DIMINUTIVE_POSSESSIVE') {
-    return translateMeaning(def1) + translateMeaning(def2)
+  if (def2 === 'DIMINUTIVE_POSSESSIVE') {
+    return 'MY ' + translateMeaning(def1)
   } else if (def2 === 'DIMINUTIVE') {
-    const meaning = sample('DEAR ', 'SWEET ') + translateMeaning(def1)
-    return meaning + '.  JUST ' + meaning + '.'
+    return sample(['DEAR ', 'SWEET ']) + translateMeaning(def1)
   } else if (def2 === 'FLOATING') {
     const meaning = translateMeaning(def1)
     return meaning + '.  JUST ' + meaning + '.'
   } else if (def2 === 'PATRONIZING') {
     const meaning = translateMeaning(def1)
     return sample(['LITTLE ' + meaning, meaning + 'LET', 'PRECIOUS ' + meaning])
-  } else if (def2 === 'POSSESSIVE') {
-    return 'MY ' + translateMeaning(def1)
   } else if (def2 === 'SIMPLE') {
     return translateMeaning(def1)
+  } else if (['PEOPLE_OF_THE_END', 'PEOPLE_OF_THE_VOID', 'TOWER'].includes(def1)) {
+    return translateMeaning(def2) + translateMeaning(def1)
+  } else if (def2 === 'POSSESSIVE_CASE') {
+    return translateMeaning(def1) + '\'S'
   }
 
   return translateMeaning(def1) + ' ' + translateMeaning(def2)
