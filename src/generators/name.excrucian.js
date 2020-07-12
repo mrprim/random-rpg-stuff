@@ -362,7 +362,7 @@ const getSuffix = () => {
   } else if (k === 5) {
     return { definition: 'PATRONIZING', value: sample(['la', 'las', 'lash', 'lios', 'lla', 'ely']) }
   } else if (k === 6) {
-    return { definition: 'POSSESSIVE', value: sample(['ca', 'ica', 'ikas', 'ka']) }
+    return { definition: 'DIMINUTIVE_POSSESSIVE', value: sample(['ca', 'ica', 'ikas', 'ka']) }
   } else if (k === 7) {
     return { definition: 'SIMPLE', value: sample(['us', 'dus', '']) }
   } else {
@@ -373,7 +373,7 @@ const getSuffix = () => {
 const getMeaning = (def1, def2) => {
   if (['PEOPLE_OF_THE_END', 'PEOPLE_OF_THE_VOID', 'TOWER'].includes(def1)) {
     return translateMeaning(def2) + translateMeaning(def1)
-  } else if (def2 === 'POSSESSIVE') {
+  } else if (def2 === 'DIMINUTIVE_POSSESSIVE') {
     return translateMeaning(def1) + translateMeaning(def2)
   } else if (def2 === 'DIMINUTIVE') {
     const meaning = sample('DEAR ', 'SWEET ') + translateMeaning(def1)
