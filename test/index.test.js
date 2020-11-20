@@ -5,7 +5,7 @@ describe('roll', () => {
     // console.log(get(names.ANIMAL))
     // console.log(get([names.ANIMAL, names.BODYPART]))
     // console.log(get(names.NAME))
-    console.log(get([names.CHARACTER.UMDAAR], { details: true, format: s => s.toLowerCase() }))
+    console.log(get([names.NAME.FULL], { details: true, format: s => s.toLowerCase() }))
     // console.log(get([names.CHARACTER.NOBILIS]))
     // console.log(get([names.CHARACTER.NOBILIS.POWER]))
     // console.log(get(names.ANIMAL))

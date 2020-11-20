@@ -18,10 +18,16 @@ import CHARACTER_NOBILIS_ZU from './character.nobilis.zu'
 import WEAPON from './weapon'
 import SPELL_FOTF from './spell.fotf'
 import HAT from './hat'
+import NAME_FULL from './name.full'
+import NAME_MODERN_GIVEN from './name.modern.given'
+import NAME_MODERN_SURNAME from './name.modern.surname'
 
 export default {
   [names.ANIMAL]: ANIMAL,
+  [names.NAME.FULL]: NAME_FULL,
   [names.NAME.BARBARIAN]: NAME_BARBARIAN,
+  [names.NAME.MODERN.GIVEN]: NAME_MODERN_SURNAME,
+  [names.NAME.MODERN.SURNAME]: NAME_MODERN_SURNAME,
   [names.NAME.EXCRUCIAN]: NAME_EXCRUCIAN,
   [names.BODYPART]: BODY_PART,
   [names.CLASS]: CLASS,
