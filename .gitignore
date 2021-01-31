@@ -1,7 +1,6 @@
 .vscode
 test.js
 dist
-
 # Logs
 logs
 *.log
