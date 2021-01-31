@@ -17,18 +17,20 @@
     <h1 class='title'>
       MrPrim's Random RPG Stuff
     </h1>
-    
+
     <div style="margin: 0 auto; width: 70%">
-      <div>
-        <select id="generator" name='generator' type='select'>
-          <option>TEST</option>
+      <div style='display: flex; justify-content: space-between;'>
+        <select id="generator" name='generator' type='select' style="flex: .64;">
+          <option></option>
         </select>
-        <button id="get">Get</button>
+        <button id="get" style="flex: .32;">Get</button>
       </div>
-    
-      <div id="results" class="results"></div>
+
+      <div class="results">
+        <ul id="results"></ul>
+      </div>
     </div>
-    
+
     <script src='./build/main.js'></script>
 </body>
 

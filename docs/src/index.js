@@ -31,9 +31,13 @@ const addClick = () => {
 
 const onClick = ev => {
   const name = document.getElementById('generator').value
+
+  if (!name) {
+    return
+  }
   const value = getRandom(name)
   const result = document.getElementById('results')
-  const final = document.createElement('div')
+  const final = document.createElement('li')
   final.innerHTML = value
 
   result.prepend(final)

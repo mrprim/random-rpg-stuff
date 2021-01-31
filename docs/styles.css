@@ -8,6 +8,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arvo;
 }
 
+select, button {
+  font-family: Lato;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+option {
+  font-family: Lato;
+}
+
 .title {
   text-align: center;
+}
+
+.results {
+  margin-top: 2em;
+  padding: 2em;
+  border: 1px solid #aaa;
+  background: #ddd;
+  border-radius: 2em;
+}
+
+.results li {
+  margin-bottom: 1em;
 }
