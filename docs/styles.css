@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 select, button {
-  font-family: Lato;
+  font-family: Arvo;
   padding: 1em;
   border-radius: 2em;
 }
@@ -24,7 +24,7 @@ option {
 
 .results {
   margin-top: 2em;
-  padding: 2em;
+  padding: 1em 2em;
   border: 1px solid #aaa;
   background: #ddd;
   border-radius: 2em;
