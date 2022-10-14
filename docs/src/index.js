@@ -33,11 +33,14 @@ const addClick = () => {
 
 const onClick = ev => {
   const name = document.getElementById('generator').value
-  console.log('name', name)
 
   if (!name) {
     return
   }
+  handleGenerate(name)
+}
+
+const handleGenerate = (name) => {
   const value = getRandom(name)
   const result = document.getElementById('results')
   const final = document.createElement('li')
@@ -52,6 +55,13 @@ const setGenerator = () => {
 
   if (params.g) {
     select.value = params.g
+  }
+
+  if (params.r && +params.r && select.value) {
+    console.log([...new Array(+params.r)]);
+    ([...new Array(+params.r)]).forEach(() => {
+      handleGenerate(select.value)
+    })
   }
 }
 
