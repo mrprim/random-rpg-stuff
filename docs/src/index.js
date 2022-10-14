@@ -3,6 +3,7 @@ import { names, getRandom } from '@mrprim/random-rpg-stuff'
 const load = function () {
   addOptions()
   addClick()
+  setGenerator()
 }
 
 const addOptions = () => {
@@ -11,6 +12,7 @@ const addOptions = () => {
   getNames(names).forEach(n => {
     const option = document.createElement('option')
     option.text = n
+    option.value = n
     select.add(option)
   })
 }
@@ -31,6 +33,7 @@ const addClick = () => {
 
 const onClick = ev => {
   const name = document.getElementById('generator').value
+  console.log('name', name)
 
   if (!name) {
     return
@@ -42,5 +45,18 @@ const onClick = ev => {
 
   result.prepend(final)
 }
+
+const setGenerator = () => {
+  const select = document.getElementById('generator')
+  const params = getParams(window.location.search)
+
+  if (params.g) {
+    select.value = params.g
+  }
+}
+
+const getParams = (queryString) => new Proxy(new URLSearchParams(queryString), {
+  get: (searchParams, prop) => searchParams.get(prop)
+})
 
 load()

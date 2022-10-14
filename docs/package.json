@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
