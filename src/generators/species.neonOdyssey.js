@@ -30,7 +30,7 @@ export default [
   'Saurian',
   'Skettik',
   'Solari',
-  'Stardust Human¹
+  'Stardust Human',
   'Tekal',
   'Terminox',
   'Varg',
