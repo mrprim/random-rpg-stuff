@@ -41,3 +41,7 @@ export const NAME = {
 export const SPELL = {
   FOTF: 'SPELL.FOTF'
 }
+
+export const SPECIES = {
+  NEON_ODYSSEY: 'SPECIES.NEON_ODYSSEY'
+}

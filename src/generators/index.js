@@ -21,6 +21,7 @@ import HAT from './hat'
 import NAME_FULL from './name.full'
 import NAME_MODERN_GIVEN from './name.modern.given'
 import NAME_MODERN_SURNAME from './name.modern.surname'
+import SPECIES_NEON_ODYSSEY from './species.neonOdyssey'
 
 export default {
   [names.ANIMAL]: ANIMAL,
@@ -44,5 +45,6 @@ export default {
   [names.CHARACTER.NOBILIS.POWER]: CHARACTER_NOBILIS_POWER,
   [names.WEAPON]: WEAPON,
   [names.SPELL.FOTF]: SPELL_FOTF,
-  [names.HAT]: HAT
+  [names.HAT]: HAT,
+  [names.SPECIES.NEON_ODYSSEY]: SPECIES_NEON_ODYSSEY
 }
